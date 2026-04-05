@@ -319,7 +319,15 @@ function getFormData(){
   return {id:currentVisitId||cryptoRandom(),patientKey,visitNo,visitDate:byId('visitDate').value,name:byId('patientName').value.trim(),birthYear:byId('birthYear').value.trim(),age:toNumber(byId('age').value),gender,addressWard:byId('addressWard').value.trim(),province:byId('province').value.trim(),phone:byId('phone').value.trim(),symptom:byId('symptom').value.trim(),icdCode:byId('icdInput').value.split(' - ')[0]?.trim()||'',icdText:byId('icdInput').value.trim(),drugs:getDrugRowsData(),followDate:byId('followDate').value,serviceFee:toNumber(byId('serviceFee').value),totalDrug:toNumber(byId('drugMoney').textContent),totalMoney:toNumber(byId('totalMoney').textContent),createdAt:currentVisitId?(visits.find(v=>v.id===currentVisitId)?.createdAt||new Date().toISOString()):new Date().toISOString()};
 }
 
-function saveVisit(){
+function saveVisit(saveToSupabase({
+  name: document.getElementById("name").value,
+  birth_year: document.getElementById("birth").value,
+  phone: document.getElementById("phone").value,
+  address: document.getElementById("address").value,
+  diagnosis: document.getElementById("diagnosis").value,
+  medicine: document.getElementById("medicine").value,
+  note: document.getElementById("note").value
+});){
   const data=getFormData();
   if(!data.name) return alert('Nhập họ tên bệnh nhân.');
   if(!data.phone) return alert('Nhập số điện thoại.');
@@ -1124,3 +1132,26 @@ async function saveToGoogleSheets(data) {
     console.error("Lỗi gửi dữ liệu:", err);
   }
 }
+// ===== SUPABASE CONFIG =====
+const SUPABASE_URL = "https://aimbdbvnwkerfrczdafy.supabase.co";
+const SUPABASE_KEY = "DAN_PUBLISHABLE_KEY_VAO_DAY";
+
+const script = document.createElement("script");
+script.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+script.onload = () => {
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  window.saveToSupabase = async function(data) {
+    const { error } = await supabase
+      .from("visits")
+      .insert([data]);
+
+    if (error) {
+      console.error("Lỗi lưu:", error);
+      alert("Lưu thất bại!");
+    } else {
+      console.log("Lưu thành công!");
+    }
+  };
+};
+document.head.appendChild(script);
