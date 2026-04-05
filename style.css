@@ -1,0 +1,208 @@
+  :root{--bg:#f3f6f9;--card:#fff;--line:#d8e1e8;--text:#1f2937;--muted:#6b7280;--primary:#0f8b8d;--primary2:#0b6b6d;--soft:#e8f8f7;--danger:#e05b5b;--shell-max:1320px;--page-pad:clamp(8px,1.6vw,14px);--card-pad:clamp(10px,1.4vw,14px);--radius:clamp(14px,1.6vw,18px);--field-h:clamp(36px,4vw,38px);--field-h-mini:clamp(32px,3.5vw,34px)}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.4}
+  .page{max-width:var(--shell-max);margin:0 auto;padding:var(--page-pad)}
+  .shell{background:#ffffffd9;border:1px solid #fff;border-radius:clamp(16px,2vw,22px);padding:var(--card-pad);box-shadow:0 10px 24px rgba(15,23,42,.08)}
+  .topbar{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:12px}
+  .title h1{margin:0;font-size:clamp(20px,2.2vw,24px);line-height:1.15}
+  .sub{color:var(--muted);font-size:clamp(11px,1.3vw,12px);margin-top:4px}
+
+  .btn{border:none;border-radius:12px;padding:8px 12px;font-weight:700;cursor:pointer;background:#fff;border:1px solid var(--line);color:var(--text);font-size:12px;line-height:1.2}
+  .btn.primary{background:var(--primary);color:#fff;border-color:transparent}
+  .btn.primary:hover{background:var(--primary2)}
+  .btn.soft{background:var(--soft);color:var(--primary2);border-color:#b8ece9}
+  .btn.danger{background:#fff2f2;color:var(--danger);border-color:#ffd0d0}
+  .btn.small{padding:7px 10px;font-size:11px}
+
+  .field,.mini,.select{width:100%;border:1px solid var(--line);border-radius:12px;padding:8px 10px;min-height:var(--field-h);background:#fff;font-size:13px;outline:none}
+  .mini,.select{min-height:var(--field-h-mini);padding:7px 9px;font-size:12px}
+  .field:focus,.mini:focus,.select:focus{border-color:#87d7d3;box-shadow:0 0 0 3px rgba(15,139,141,.12)}
+  .label{display:block;font-size:10px;color:var(--muted);margin:0 0 4px 2px;font-weight:700}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:var(--card-pad)}
+  .card-title{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+  .card-title h2,.card-title h3{margin:0;font-size:clamp(16px,1.8vw,18px);line-height:1.2}
+  .row-actions,.inline,.searchbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .muted{color:var(--muted)}
+  .hidden{display:none !important}
+  .scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .arrow-wrap{position:relative}
+  .arrow-wrap .field,.arrow-wrap .mini,.arrow-wrap .select{padding-right:28px}
+  .arrow{position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted);font-size:11px}
+
+  .patient-top{margin-bottom:14px}
+  .clinic-card{margin-bottom:14px;background:
+    linear-gradient(180deg,rgba(253,254,254,.92) 0%,rgba(246,251,253,.95) 100%),
+    url('https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    border-color:#dce7ee;
+    box-shadow:0 14px 28px rgba(31,41,55,.08)}
+  .clinic-card > .card-title{display:grid;grid-template-columns:minmax(220px,1fr) minmax(320px,520px) auto;align-items:stretch;gap:10px}
+  .clinic-card .stats-card-top{margin:0;padding:8px 10px;background:rgba(255,255,255,.86);backdrop-filter:blur(4px);border-color:#dbe8ef;border-radius:14px;min-width:0;align-self:stretch;display:flex;align-items:center}
+  .clinic-card .stats-card-top .card-title{display:none}
+  .clinic-card .stats-card-top .stats-grid{gap:6px;grid-template-columns:repeat(4,minmax(0,1fr));width:100%}
+  .clinic-card .stats-card-top .stats-grid-6{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .clinic-card .stats-card-top .stat{padding:8px 10px;border-radius:12px;background:rgba(251,252,253,.94);height:100%;display:flex;flex-direction:column;justify-content:center}
+  .clinic-card .stats-card-top .stat .muted{font-size:10px}
+  .clinic-card .stats-card-top .stat .k{font-size:18px;margin-top:3px}
+  .clinic-card .stats-card-top .trend{margin-top:5px;padding:3px 6px;font-size:10px}
+  .clinic-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
+  .clinic-meta div{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
+  .clinic-meta strong{display:block;font-size:clamp(13px,1.4vw,14px);margin-top:4px}
+  .clinic-meta-label{display:block;font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .clinic-form{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:12px}
+  .patient-list,.drug-table,.history-table,.stock-table{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+  .patient-head,.patient-row{display:grid;grid-template-columns:96px 1.7fr 62px 100px 82px 120px 64px;gap:8px;padding:9px 10px;align-items:center;font-size:12px}
+  .patient-head,.drug-head,.history-head,.stock-head{background:#f6fafc;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line)}
+  .patient-row{border-bottom:1px solid #edf2f7;cursor:pointer}
+  .patient-row:last-child{border-bottom:none}
+  .patient-row.active{background:#eefcfb}
+  .follow-badge{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:700;text-align:center}
+  .follow-badge.up{background:#e8fbef;color:#18794e}
+  .follow-badge.down{background:#fff1f1;color:#c23b3b}
+  .follow-badge.neutral{background:#eef2f7;color:#5b6472}
+
+  .main-layout{display:grid;grid-template-columns:1fr;gap:14px}
+  .form-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+  .section-grid{display:grid;gap:14px}
+  .info-grid{display:grid;grid-template-columns:1.1fr 1.1fr .8fr .95fr;gap:10px}
+  .info-grid-2{display:grid;grid-template-columns:1.6fr 1fr;gap:10px;margin-top:10px}
+  .info-grid-3{display:grid;grid-template-columns:1fr 1.3fr;gap:10px;margin-top:10px}
+
+  .suggest-box,.code-box{margin-top:8px;border:1px solid var(--line);border-radius:12px;overflow:hidden;max-height:240px;overflow-y:auto;background:#fcfdfd}
+  .suggest-item,.code-row{padding:10px 12px;border-bottom:1px solid #edf2f7;font-size:12px;cursor:pointer}
+  .suggest-item:last-child,.code-row:last-child{border-bottom:none}
+  .suggest-item:hover,.code-row:hover{background:#eefcfb}
+  .diag-row{display:grid;grid-template-columns:1.5fr auto auto;gap:8px;align-items:start}
+
+  .drug-head{display:none}
+  .drug-row{display:grid;grid-template-columns:36px minmax(112px,.72fr) minmax(86px,.48fr) 80px 88px 102px;gap:8px;padding:9px 10px;align-items:start;font-size:12px}
+  .drug-row{border-bottom:1px solid #edf2f7}
+  .drug-row:last-child{border-bottom:none}
+  .drug-row > div{min-width:0}
+  .drug-footer{display:none}
+  .mini.compact{width:72px;min-width:72px}
+  .mini.qty{width:100%;min-width:0}
+  .drug-usage{min-height:38px;max-height:74px;resize:vertical}
+  .dose-grid{display:grid;grid-template-columns:repeat(2,minmax(72px,1fr));gap:8px}
+  .dose-grid-3{grid-template-columns:repeat(3,minmax(72px,1fr))}
+  .drug-brand,.drug-active,.drug-unit,.drug-qty,.drug-price,.drug-amount,.drug-usage,.dose-morning,.dose-noon,.dose-night{width:100%;min-width:0}
+  .drug-row .label{margin-bottom:3px}
+  .drug-row .mini,.drug-row .field,.drug-row .select{min-height:34px;padding:7px 9px}
+  .drug-row .dose-box{padding:5px 6px}
+  .drug-row .dose-label{margin-bottom:3px}
+  .drug-row .btn.small{padding:6px 8px}
+  .drug-usage-wrap{grid-column:2 / 4}
+  .drug-unit-wrap{grid-column:4}
+  .drug-price-wrap{grid-column:5}
+  .drug-amount-wrap{grid-column:6}
+  .drug-delete-wrap{grid-column:1;grid-row:2;justify-self:start;align-self:start;padding-top:0 !important}
+  .dose-box{border:1px solid var(--line);border-radius:10px;padding:6px;background:#fff}
+  .dose-label{font-size:10px;color:var(--muted);margin-bottom:4px;text-align:center;font-weight:700}
+  .warning{margin-top:10px;background:#fff7e8;border:1px solid #ffe0a8;color:#8a5a00;border-radius:12px;padding:10px 12px;font-size:12px}
+
+  .stock-head,.stock-row{display:grid;grid-template-columns:1.15fr 1fr .72fr 1fr .8fr .8fr .5fr;gap:8px;padding:9px 10px;align-items:center;font-size:12px}
+  .stock-row{border-bottom:1px solid #edf2f7}
+  .stock-row:last-child{border-bottom:none}
+
+  .bottom-grid{display:grid;grid-template-columns:1fr .9fr;gap:12px}
+  .sum-card{display:grid;gap:10px}
+  .sum-line{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:700}
+  .sum-line.total{background:#e9fbfb;color:var(--primary2);font-size:clamp(18px,2.2vw,20px)}
+
+  .history-head,.history-row{display:grid;grid-template-columns:98px 82px 1.2fr 110px 74px;gap:10px;padding:9px 10px;align-items:center;font-size:12px}
+  .history-row{border-bottom:1px solid #edf2f7;cursor:pointer}
+  .history-row:last-child{border-bottom:none}
+
+  .stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .stats-grid-6{grid-template-columns:repeat(3,1fr)}
+  .stat{padding:12px;border-radius:14px;background:#fbfcfd;border:1px solid var(--line)}
+  .stat .k{font-size:clamp(22px,2.4vw,28px);font-weight:800;margin-top:6px}
+  .trend{margin-top:8px;display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:700}
+  .trend.up{background:#e8fbef;color:#18794e}
+  .trend.down{background:#fff4de;color:#b46d00}
+
+  .rx-modal{position:fixed;inset:0;background:rgba(15,23,42,.45);display:flex;align-items:center;justify-content:center;padding:16px;z-index:9999}
+  .rx-panel{background:#fff;width:min(900px,100%);max-height:90vh;overflow:auto;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+  .rx-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+  .rx-body{padding:18px}
+  .rx-paper{font-family:Arial,sans-serif;color:#1f4f8b;padding:8px}
+  .rx-header{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:14px;font-weight:700}
+  .rx-header div{line-height:1.5}
+  .rx-center-title{text-align:center;font-size:30px;font-weight:700;letter-spacing:.5px;margin:24px 0 18px}
+  .rx-line{display:flex;align-items:flex-end;gap:8px;margin:14px 0;font-size:15px}
+  .rx-label{white-space:nowrap;font-weight:700}
+  .rx-dots{flex:1;border-bottom:2px dotted #8aa2c7;height:18px}
+  .rx-short{width:100px;border-bottom:2px dotted #8aa2c7;height:18px}
+  .rx-short-sm{width:60px;border-bottom:2px dotted #8aa2c7;height:18px}
+  .rx-rxitem{margin:16px 0 10px;font-size:15px}
+  .rx-rxitem .top,.rx-rxitem .sub{display:flex;align-items:flex-end;gap:8px;margin-top:8px}
+  .rx-sign{margin-top:26px;text-align:right;font-size:15px}
+  .rx-bottom-note{margin-top:36px;text-align:center;font-size:16px;font-style:italic;font-weight:700}
+  .rx-revisit{margin-top:26px;font-size:15px}
+
+  @media (max-width:1280px){
+    .page{max-width:1180px}
+    .clinic-card > .card-title{grid-template-columns:minmax(220px,1fr) minmax(280px,1fr) auto}
+    .clinic-card .stats-card-top .stats-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .clinic-card .stats-card-top .stats-grid-6{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .info-grid{grid-template-columns:1fr 1fr .8fr .9fr}
+    .patient-head,.patient-row{min-width:820px}
+    .history-head,.history-row{min-width:760px}
+    .stock-head,.stock-row{min-width:900px}
+    .drug-row{min-width:760px}
+  }
+  @media (max-width:1024px){
+    body{font-size:13px}
+    .topbar{align-items:stretch}
+    .clinic-card > .card-title{grid-template-columns:1fr}
+    .clinic-card .stats-card-top{padding:8px}
+    .clinic-card .stats-card-top .stats-grid,.clinic-card .stats-card-top .stats-grid-6{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .clinic-meta{grid-template-columns:1fr}
+    .clinic-form{grid-template-columns:repeat(2,1fr)}
+    .form-grid{grid-template-columns:1fr}
+    .bottom-grid{grid-template-columns:1fr}
+    .info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .info-grid-2,.info-grid-3{grid-template-columns:1fr}
+    .diag-row{grid-template-columns:1fr auto auto}
+    .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .stats-grid-6{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .patient-head,.patient-row{min-width:780px}
+    .drug-row{min-width:720px}
+    .rx-header{grid-template-columns:1fr}
+  }
+  @media (max-width:720px){
+    .page{padding:8px}
+    .shell{padding:10px}
+    .topbar{flex-direction:column}
+    .row-actions,.searchbar,.inline{gap:6px}
+    .searchbar{flex-direction:column;align-items:stretch}
+    .card-title{align-items:flex-start}
+    .card-title .row-actions{width:100%}
+    .card-title .row-actions .btn{flex:1}
+    .title h1{font-size:20px}
+    .field,.mini,.select{font-size:16px}
+    .btn{min-height:40px}
+    .btn.small{min-height:36px}
+    .clinic-form{grid-template-columns:1fr}
+    .info-grid,.info-grid-2,.info-grid-3,.diag-row,.stats-grid,.stats-grid-6{grid-template-columns:1fr}
+    .patient-head,.patient-row{min-width:720px}
+    .drug-row{min-width:680px}
+    .history-head,.history-row{min-width:680px}
+    .stock-head,.stock-row{min-width:820px}
+  }
+  @media (max-width:430px){
+    .page{padding:6px}
+    .shell{padding:8px;border-radius:14px}
+    .card{padding:10px}
+    .title h1{font-size:18px}
+    .sub{font-size:11px}
+    .clinic-card .stats-card-top .stats-grid,.clinic-card .stats-card-top .stats-grid-6{grid-template-columns:1fr}
+    .stat{padding:10px}
+    .stat .k{font-size:22px}
+    .trend{font-size:10px;padding:4px 8px}
+  }

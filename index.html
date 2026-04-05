@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PMS phòng khám - Bản ổn định</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page"><div class="shell">
+  <div class="topbar">
+    <div class="title"><h1>PMS phòng khám - Bản ổn định</h1><div class="sub">Đã khôi phục lại các nút và giữ form đơn giản để tránh lỗi dây chuyền.</div></div>
+    <div class="row-actions"><button class="btn" id="refreshBtn" type="button">↻ Làm mới</button><button class="btn" id="exportBtn" type="button">⇩ Xuất dữ liệu</button></div>
+  </div>
+
+  <div class="card clinic-card">
+    <div class="card-title">
+      <div>
+        <h2 id="clinicDisplayName">Phong kham chuyen khoa</h2>
+        <div class="sub" id="clinicDisplayDoctor">Bac si phu trach</div>
+      </div>
+      <div class="row-actions">
+        <button class="btn small soft" id="toggleClinicBtn" type="button">Sua thong tin</button>
+        <button class="btn small primary" id="saveClinicBtn" type="button">Luu thong tin</button>
+      </div>
+    </div>
+    <div class="clinic-meta">
+      <div><span class="clinic-meta-label">Dia chi</span><strong id="clinicDisplayAddress">Chua cap nhat</strong></div>
+      <div><span class="clinic-meta-label">Thoi gian lam viec</span><strong id="clinicDisplayHours">Chua cap nhat</strong></div>
+      <div><span class="clinic-meta-label">So dien thoai</span><strong id="clinicDisplayPhone">Chua cap nhat</strong></div>
+    </div>
+    <div class="clinic-form hidden" id="clinicForm">
+      <div><label class="label">Ten phong kham</label><input class="field" id="clinicNameInput" placeholder="Vi du: Phong kham Tam than Minh Tam"></div>
+      <div><label class="label">Ten bac si</label><input class="field" id="clinicDoctorInput" placeholder="Vi du: BSCKI Tran Nguyen Thanh Minh"></div>
+      <div><label class="label">Dia chi</label><input class="field" id="clinicAddressInput" placeholder="So nha, phuong xa, tinh thanh"></div>
+      <div><label class="label">Thoi gian lam viec</label><input class="field" id="clinicHoursInput" placeholder="Vi du: 07:00 - 19:00, Thu 2 - Chu nhat"></div>
+      <div><label class="label">So dien thoai</label><input class="field" id="clinicPhoneInput" placeholder="Vi du: 0909 123 456"></div>
+    </div>
+  </div>
+
+  <div class="card patient-top">
+    <div class="card-title"><h2>Danh sách bệnh nhân</h2></div>
+    <div class="searchbar"><input class="field" id="searchInput" placeholder="🔎 Tìm tên, SĐT, địa chỉ, năm sinh..."><button class="btn small primary" id="searchBtn" type="button">Tìm kiếm</button><button class="btn small" id="clearSearchBtn" type="button">Xóa tìm</button></div>
+    <div class="scroll-x"><div class="patient-list"><div class="patient-head"><div>Ngày khám</div><div>Họ tên / SĐT / Địa chỉ</div><div>Tuổi</div><div>Tổng tiền</div><div>ICD</div><div>Xóa</div></div><div id="patientListBody"></div></div></div>
+  </div>
+
+  <div class="main-layout">
+    <div class="form-grid">
+      <div class="section-grid">
+        <div class="card">
+          <div class="row-actions" style="justify-content:flex-end;margin-bottom:12px"><button class="btn primary" id="saveBtn" type="button">Lưu / Hoàn tất khám</button><button class="btn soft" id="newBtn" type="button">➕ Bệnh mới</button><button class="btn" id="newPrescriptionBtn" type="button">🧾 Toa mới</button></div>
+          <div class="info-grid">
+            <div><label class="label">Ngày, giờ</label><input class="field" id="visitDate" type="datetime-local"></div>
+            <div><label class="label">Họ và tên</label><input class="field" id="patientName"></div>
+            <div><label class="label">Năm sinh</label><input class="field" id="birthYear"></div>
+            <div><label class="label">Tuổi / Giới</label><div class="inline"><input class="field" id="age" readonly style="flex:1"><select class="field" id="gender" style="max-width:90px"><option>Nam</option><option>Nữ</option></select></div></div>
+          </div>
+          <div class="info-grid-2">
+            <div><label class="label">Địa chỉ + Xã / Phường</label><input class="field" id="addressWard"></div>
+            <div><label class="label">Tỉnh / Thành</label><div class="arrow-wrap"><input class="field" id="province" list="provinceList"><span class="arrow">▾</span></div></div>
+          </div>
+          <div class="info-grid-3">
+            <div><label class="label">Số điện thoại</label><input class="field" id="phone"></div>
+            <div><label class="label">Triệu chứng</label><input class="field" id="symptom"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><h3>Chẩn đoán</h3></div>
+          <div class="diag-row">
+            <div><label class="label">Gõ mã hoặc vài chữ</label><input class="field" id="icdInput" placeholder="Ví dụ: f20 hoặc hoang tưởng"><div class="suggest-box hidden" id="icdSuggestBox"></div></div>
+            <button class="btn primary small" id="addCodeBtn" type="button">Thêm</button>
+            <button class="btn small" id="toggleCodeDataBtn" type="button">Dữ liệu mã ▾</button>
+          </div>
+          <div class="code-box hidden" id="codeDataBox"></div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="card">
+          <div class="card-title"><h3>Chỉ định thuốc</h3><div class="row-actions"><button class="btn primary small" id="previewPrintBtn" type="button">🖨 Xem / In toa</button><button class="btn primary small" id="addDrugBtn" type="button">➕ Thêm thuốc</button><button class="btn small" id="toggleStockBtn" type="button">📦 Nhập kho thuốc</button></div></div>
+          <div class="scroll-x"><div class="drug-table"><div class="drug-head"><div>#</div><div>Hoạt chất</div><div>Tên thương mại</div><div>Đơn vị</div><div>SL</div><div>Sáng / Tối</div><div></div></div><div id="drugRows"></div></div></div>
+          <div class="warning" id="warningBox">Chưa có cảnh báo thuốc.</div>
+          <div class="stock-table hidden" id="stockSheet"><div class="stock-head"><div>Hoạt chất</div><div>Tên thương mại</div><div>Đơn vị</div><div>Công dụng</div><div>Giá bán</div><div>Tồn kho</div><div>Xóa</div></div><div id="stockRows"></div></div>
+        </div>
+
+        <div class="bottom-grid">
+          <div class="card">
+            <div class="inline">
+              <div style="flex:1;min-width:180px"><label class="label">Ngày hẹn tái khám</label><input class="field" id="followDate" type="date"></div>
+              <div style="flex:1;min-width:180px"><label class="label">Công khám</label><div class="arrow-wrap"><input class="field" id="serviceFee" list="feeOptions"><span class="arrow">▾</span></div></div>
+            </div>
+          </div>
+          <div class="card sum-card">
+            <div class="sum-line"><span>Tiền thuốc</span><span id="drugMoney">0</span></div>
+            <div class="sum-line"><span>Công khám</span><span id="serviceMoney">0</span></div>
+            <div class="sum-line total"><span>Tổng tiền thu</span><span id="totalMoney">0</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="card"><div class="card-title"><h3>Lịch sử khám</h3><button class="btn small soft" id="reloadHistoryBtn" type="button">Tải lại</button></div><div class="scroll-x"><div class="history-table"><div class="history-head"><div>Ngày</div><div>Mã khám</div><div>Chẩn đoán</div><div>Tổng tiền</div><div>Mở</div></div><div id="historyRows"></div></div></div></div>
+      <div class="card"><div class="card-title"><h3>Thống kê nhanh</h3><div class="muted">Tính từ dữ liệu đã lưu</div></div><div class="stats-grid stats-grid-6"><div class="stat"><div class="muted">Lượt khám trong tuần</div><div class="k" id="statWeekCount">0</div><div class="trend up" id="statWeekTrend">▲ 0% so với tuần trước</div></div><div class="stat"><div class="muted">Lượt khám trong tháng</div><div class="k" id="statMonthCount">0</div><div class="trend up" id="statMonthTrend">▲ 0% so với tháng trước</div></div><div class="stat"><div class="muted">Lãi tạm tính</div><div class="k" id="statProfit">0</div><div class="trend up" id="statProfitTrend">▲ 0% so với tháng trước</div></div><div class="stat"><div class="muted">Tỷ lệ tái khám</div><div class="k" id="statRevisitRate">0%</div><div class="trend up" id="statRevisitTrend">0/0 ca quay lại</div></div><div class="stat"><div class="muted">Tái khám đúng hẹn</div><div class="k" id="statOnTimeCount">0</div><div class="trend up" id="statOnTimeTrend">0 ca đúng hẹn</div></div><div class="stat"><div class="muted">Trễ / không quay lại</div><div class="k" id="statLateMissedCount">0</div><div class="trend down" id="statLateMissedTrend">0 trễ, 0 không quay lại</div></div></div></div>
+    </div>
+  </div>
+</div></div>
+
+<datalist id="provinceList"></datalist>
+<datalist id="feeOptions"></datalist>
+<datalist id="doseOptions"><option value="0"></option><option value="0.5"></option><option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option><option value="5"></option><option value="6"></option><option value="n"></option></datalist>
+<div id="rxModal" class="rx-modal hidden">
+  <div class="rx-panel">
+    <div class="rx-head">
+      <strong>Xem toa thuốc</strong>
+      <div class="row-actions">
+        <button class="btn small primary" id="rxPrintBtn" type="button">In</button>
+        <button class="btn small" id="rxCloseBtn" type="button">Đóng</button>
+      </div>
+    </div>
+    <div class="rx-body" id="rxBody"></div>
+  </div>
+</div>
+<iframe id="printFrame" class="hidden"></iframe>
+
+<script src="icd-data.js"></script>
+<script src="drug-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
