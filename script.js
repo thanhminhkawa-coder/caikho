@@ -1112,7 +1112,7 @@ console.assert(typeof printPrescription==='function','printPrescription missing'
 console.assert(createDrugRow({}).querySelectorAll('.dose-night').length===1,'duplicate dose-night input');
 updateWarning();
 init();
-const GOOGLE_SHEETS_API_URL = "DAN_LINK_APPS_SCRIPT_VAO_DAY";
+const GOOGLE_SHEETS_API_URL = "https://script.google.com/macros/s/AKfycbxRzqvkbrFXaoSlg1S8BwXLglEhA4fHPNKpuXfHDEpF9XIpKOIRvqlGc4-1f3T5KTZK2g/exec";
 
 async function saveToGoogleSheets(data) {
   try {
