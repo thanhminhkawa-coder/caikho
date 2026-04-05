@@ -1112,3 +1112,15 @@ console.assert(typeof printPrescription==='function','printPrescription missing'
 console.assert(createDrugRow({}).querySelectorAll('.dose-night').length===1,'duplicate dose-night input');
 updateWarning();
 init();
+const GOOGLE_SHEETS_API_URL = "DAN_LINK_APPS_SCRIPT_VAO_DAY";
+
+async function saveToGoogleSheets(data) {
+  try {
+    await fetch(GOOGLE_SHEETS_API_URL, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+  } catch (err) {
+    console.error("Lỗi gửi dữ liệu:", err);
+  }
+}
