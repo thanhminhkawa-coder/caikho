@@ -1,4 +1,4 @@
-﻿window.ICD_IMPORT = [
+﻿[
     {
         "code":  "F00.0",
         "name":  "Rối loạn sa sút trí tuệ trong bệnh Alzheimer khởi phát sớm"
@@ -271,4 +271,4 @@
         "code":  "F99",
         "name":  "Rối loạn tâm thần không biệt định khác"
     }
-];
+]

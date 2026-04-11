@@ -1,0 +1,362 @@
+﻿[
+    {
+        "activeIngredient":  "Risperidone 2mg",
+        "brandName":  "Agirisdon 2mg",
+        "unit":  "Vien",
+        "usage":  "Chống loạn thần | Max:16mg | Hiệp đồng: Valproate, Sertraline | Tránh: Clozapine, QT",
+        "price":  1495,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Quetiapin 50mg",
+        "brandName":  "Seroquel 50mg",
+        "unit":  "Vien",
+        "usage":  "Loạn thần, ngủ | Max:800mg | Hiệp đồng: Valproate | Tránh: Diazepam",
+        "price":  10472,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Quetiapin 100mg",
+        "brandName":  "Daquetin 100mg",
+        "unit":  "Vien",
+        "usage":  "Loạn thần | Max:800mg | Hiệp đồng: Valproate | Tránh: Diazepam",
+        "price":  11400,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Quetiapine XR 200 mg",
+        "brandName":  "Seroquel XR 200 mg",
+        "unit":  "Vien",
+        "usage":  "Loạn thần | Max:800mg | Hiệp đồng: Valproate | Tránh: CNS depressants",
+        "price":  21896,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Quetiapine XR 300 mg",
+        "brandName":  "Seroquel XR 300 mg",
+        "unit":  "Vien",
+        "usage":  "Loạn thần | Max:800mg | Hiệp đồng: Valproate | Tránh: Diazepam",
+        "price":  33320,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Haloperidol 2mg",
+        "brandName":  "Halofar 2mg",
+        "unit":  "Vien",
+        "usage":  "Kích động cấp | Max:20mg | Hiệp đồng: Trihexyphenidyl | Tránh: QT",
+        "price":  155,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Olanzapin 5mg",
+        "brandName":  "Nykob 5mg",
+        "unit":  "Vien",
+        "usage":  "Ổn định khí sắc | Max:20mg | Hiệp đồng: Valproate | Tránh: Diazepam",
+        "price":  5357,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Olanzapine 10 mg",
+        "brandName":  "Olanxol 10 mg",
+        "unit":  "Vien",
+        "usage":  "Ổn định khí sắc | Max:20mg | Hiệp đồng: Valproate | Tránh: CNS depressants",
+        "price":  2190,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Levomepromazin 25mg",
+        "brandName":  "Levomepromazin 25mg",
+        "unit":  "Vien",
+        "usage":  "An thần | Max:300mg | Hiệp đồng: Diazepam | Tránh: Alcohol",
+        "price":  720,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Clozapin 25mg",
+        "brandName":  "Clomedin tablets 25mg",
+        "unit":  "Vien",
+        "usage":  "Kháng trị | Max:900mg | Hiệp đồng: Valproate | Tránh: Carbamazepine",
+        "price":  2800,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Clozapin 100mg",
+        "brandName":  "Lepigin 100mg",
+        "unit":  "Vien",
+        "usage":  "Kháng trị | Max:900mg | Hiệp đồng: Valproate | Tránh: Carbamazepine",
+        "price":  4624,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Sertralin 50mg",
+        "brandName":  "Asentra 50mg",
+        "unit":  "Vien",
+        "usage":  "Trầm cảm | Max:200mg | Hiệp đồng: Olanzapine | Tránh: Tramadol",
+        "price":  8500,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Sertralin 100mg",
+        "brandName":  "Zoloman 100mg",
+        "unit":  "Vien",
+        "usage":  "Trầm cảm | Max:200mg | Hiệp đồng: Olanzapine | Tránh: Serotonin",
+        "price":  3780,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Diazepam 5mg",
+        "brandName":  "Diazepam 5mg",
+        "unit":  "Vien",
+        "usage":  "An thần | Max:40mg | Hiệp đồng: Levomepromazine | Tránh: Opioid",
+        "price":  168,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Zopiclon 7.5mg",
+        "brandName":  "Phamzopic 7.5mg",
+        "unit":  "Vien",
+        "usage":  "Ngủ | Max:7.5mg | Hiệp đồng: Diazepam | Tránh: Alcohol",
+        "price":  2700,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Sulpirid 50mg",
+        "brandName":  "Dogtapine 50mg",
+        "unit":  "Vien",
+        "usage":  "Loạn thần nhẹ | Max:800mg | Hiệp đồng: Sertraline | Tránh: QT",
+        "price":  145,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Trihexyphenidyl hydrochloride 2mg",
+        "brandName":  "Danapha-trihex 2mg",
+        "unit":  "Vien",
+        "usage":  "Chống ngoại tháp | Max:15mg | Hiệp đồng: Haloperidol | Tránh: Clozapine",
+        "price":  189,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Valproat natri 200 mg",
+        "brandName":  "Delekine 200 mg",
+        "unit":  "Vien",
+        "usage":  "Ổn định khí sắc | Max:60mg/kg | Hiệp đồng: Quetiapine | Tránh: Carbapenem",
+        "price":  1242,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Valproat natri 500 mg",
+        "brandName":  "Dalekine 500 mg",
+        "unit":  "Vien",
+        "usage":  "Ổn định khí sắc | Max:60mg/kg | Hiệp đồng: Quetiapine | Tránh: Carbapenem",
+        "price":  2100,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Depakine Chrono 500 mg",
+        "brandName":  "Valproate natri 333 mg + Acid valproic 145 mg",
+        "unit":  "Vien",
+        "usage":  "Ổn định khí sắc | Max:60mg/kg | Hiệp đồng: Antipsychotics | Tránh: Carbapenem",
+        "price":  6972,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Cefalexin 500mg",
+        "brandName":  "Cefalexin 500mg",
+        "unit":  "Vien",
+        "usage":  "Kháng sinh | Max:4000mg | Hiệp đồng: Paracetamol | Tránh: None",
+        "price":  695,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Cefixim 200mg",
+        "brandName":  "Imexime 200mg",
+        "unit":  "Vien",
+        "usage":  "Kháng sinh | Max:400mg | Hiệp đồng: Paracetamol | Tránh: None",
+        "price":  10500,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Amoxicillin/Acid Clavulanic 500/125mg",
+        "brandName":  "Auclanity 125mg",
+        "unit":  "Vien",
+        "usage":  "Kháng sinh | Max:1750mg | Hiệp đồng: Omeprazole | Tránh: Dị ứng",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Metronidazol 250mg",
+        "brandName":  "Metronidazol 250mg",
+        "unit":  "Vien",
+        "usage":  "Kháng khuẩn | Max:2000mg | Hiệp đồng: Amoxicillin | Tránh: Alcohol",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Cotrimoxazole 800 mg / 160 mg",
+        "brandName":  "Cotrimoxazole 800 mg / 160 mg",
+        "unit":  "Vien",
+        "usage":  "Kháng sinh | Max:1600/320mg | Hiệp đồng: Amoxicillin | Tránh: Warfarin",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Amlodidin 5mg",
+        "brandName":  "Kavasdin 5mg",
+        "unit":  "Vien",
+        "usage":  "Hạ áp | Max:10mg | Hiệp đồng: Captopril | Tránh: Hạ áp",
+        "price":  178,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Captopril25mg",
+        "brandName":  "Captagim 25mg",
+        "unit":  "Vien",
+        "usage":  "Hạ áp | Max:150mg | Hiệp đồng: Amlodipine | Tránh: Kali cao",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Metformin850mg",
+        "brandName":  "Metformin850mg",
+        "unit":  "Vien",
+        "usage":  "ĐTĐ | Max:2550mg | Hiệp đồng: Insulin | Tránh: Suy thận",
+        "price":  850,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Trimetazindin 20mg",
+        "brandName":  "Vartel 20mg",
+        "unit":  "Vien",
+        "usage":  "Thiếu máu tim | Max:70mg | Hiệp đồng: Beta blocker | Tránh: Parkinson",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Paracetamol(acetaminophen)-500mg",
+        "brandName":  "Partamol TAB 500mg",
+        "unit":  "Vien",
+        "usage":  "Giảm đau | Max:4000mg | Hiệp đồng: Cefalexin | Tránh: Alcohol",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Alpha chymotrypsin 8.400UI",
+        "brandName":  "Katrysin Fort 8.400UI",
+        "unit":  "Vien",
+        "usage":  "Chống viêm | Max:~4.2mg | Hiệp đồng: NSAIDs | Tránh: Chảy máu",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Omeprazole 20mg",
+        "brandName":  "Kagasdne 20mg",
+        "unit":  "Vien",
+        "usage":  "Giảm acid | Max:40mg | Hiệp đồng: Antibiotics | Tránh: Clopidogrel",
+        "price":  280,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Chlorpheniramine maleate 4mg",
+        "brandName":  "Clorpheniramin 4mg",
+        "unit":  "Vien",
+        "usage":  "Kháng dị ứng | Max:24mg | Hiệp đồng: Paracetamol | Tránh: Alcohol",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "VitaminB1+B6+B12",
+        "brandName":  "Neutrivit 500",
+        "unit":  "Vien",
+        "usage":  "Vitamin | Max:Safe | Hiệp đồng: General | Tránh: None",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "VitaminB6+Mamgnesilactat",
+        "brandName":  "Pimagie",
+        "unit":  "Vien",
+        "usage":  "Vitamin | Max:Safe | Hiệp đồng: General | Tránh: None",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Piracetam 800mg",
+        "brandName":  "Piracetam 800mg",
+        "unit":  "Vien",
+        "usage":  "Não | Max:4800mg | Hiệp đồng: Choline | Tránh: Suy thận",
+        "price":  700,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "ATILIVER Diệp hạ châu",
+        "brandName":  "ATILIVER Diệp hạ châu",
+        "unit":  "Vien",
+        "usage":  "Gan | Max:NA | Hiệp đồng: Support | Tránh: None",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Diazepam 10mg/2ml",
+        "brandName":  "Diazepam 10mg/2ml",
+        "unit":  "Ong",
+        "usage":  "An thần | Max:40mg | Hiệp đồng: Sedatives | Tránh: Opioid",
+        "price":  3260,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Haloperidol 5mg/ml",
+        "brandName":  "Haloperidol 0,5",
+        "unit":  "Ong",
+        "usage":  "Loạn thần | Max:20mg | Hiệp đồng: Trihexyphenidyl | Tránh: QT",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "clorpromazin 25mg/2ml",
+        "brandName":  "Aminazin 1,25%",
+        "unit":  "Ong",
+        "usage":  "Loạn thần | Max:800mg | Hiệp đồng: Diazepam | Tránh: Alcohol",
+        "price":  97,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "VitaminB1-100mg/ml",
+        "brandName":  "VitaminB100",
+        "unit":  "Ong",
+        "usage":  "Vitamin | Max:Safe | Hiệp đồng: General | Tránh: None",
+        "price":  500,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "VitaminB1-50mg",
+        "brandName":  "VitaminB150",
+        "unit":  "Vien",
+        "usage":  "Vitamin | Max:Safe | Hiệp đồng: General | Tránh: None",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Glucose -5%;500ml",
+        "brandName":  "Glucose5%",
+        "unit":  "Chai",
+        "usage":  "Dịch truyền | Max:Clinical | Hiệp đồng: Fluid | Tránh: Tăng đường",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Natri clorid-0.9%;500ml",
+        "brandName":  "Natri clorid 0.9%",
+        "unit":  "Chai",
+        "usage":  "Dịch truyền | Max:Clinical | Hiệp đồng: Fluid | Tránh: Quá tải",
+        "price":  0,
+        "quantity":  500
+    },
+    {
+        "activeIngredient":  "Ringer lactat 500ml",
+        "brandName":  "Ringer lactctate 500ml",
+        "unit":  "Chai",
+        "usage":  "Dịch truyền | Max:Clinical | Hiệp đồng: Fluid | Tránh: Kali cao",
+        "price":  0,
+        "quantity":  500
+    }
+]
